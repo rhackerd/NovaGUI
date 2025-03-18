@@ -1,4 +1,4 @@
-#include "gui.h"
+#include "../novagui.h"
 
 Action GUI::drawRectangle(Vector4 area, Style style, bool enableHoverChange) {
     Action action = NONE;

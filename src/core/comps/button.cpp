@@ -1,4 +1,4 @@
-#include "gui.h"
+#include "../novagui.h"
 #include <iostream>
 
 Action GUI::drawButton(Vector4 area, Style style, std::string text) {

@@ -2,8 +2,7 @@
 #define GUI_H
 
 #include <raylib.h>
-#include "vectors.h"
-#include "types.h"
+#include "defs/types.h"
 #include <string>
 
 namespace GUI {

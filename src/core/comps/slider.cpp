@@ -1,4 +1,4 @@
-#include "gui.h"
+#include "../novagui.h"
 #include <cmath>
 
 Action GUI::drawSlider(Vector4 area, Style style, float maxValue, float* value, bool showValue, float step) {

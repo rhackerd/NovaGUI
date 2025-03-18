@@ -1,4 +1,4 @@
-#include <core.h>
+#include <novagui.h>
 #include <iostream>
 
 int main() {
