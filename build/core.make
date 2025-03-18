@@ -72,10 +72,14 @@ endif
 GENERATED :=
 OBJECTS :=
 
+GENERATED += $(OBJDIR)/basic.o
 GENERATED += $(OBJDIR)/button.o
 GENERATED += $(OBJDIR)/core.o
+GENERATED += $(OBJDIR)/slider.o
+OBJECTS += $(OBJDIR)/basic.o
 OBJECTS += $(OBJDIR)/button.o
 OBJECTS += $(OBJDIR)/core.o
+OBJECTS += $(OBJDIR)/slider.o
 
 # Rules
 # #############################################
@@ -139,7 +143,13 @@ endif
 # File Rules
 # #############################################
 
+$(OBJDIR)/basic.o: ../src/core/components/basic.cpp
+	@echo "$(notdir $<)"
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/button.o: ../src/core/components/button.cpp
+	@echo "$(notdir $<)"
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/slider.o: ../src/core/components/slider.cpp
 	@echo "$(notdir $<)"
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/core.o: ../src/core/core.cpp

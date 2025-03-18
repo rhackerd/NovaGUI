@@ -4,12 +4,26 @@
 #include <raylib.h>
 #include "vectors.h"
 #include "types.h"
+#include <string>
 
 namespace GUI {
-    // normal functions
-    Action drawButton(Vector4 area, Style style);
+    // basic functions
+    Action drawRectangle(Vector4 area, Style style, bool enableHoverChange);
 
-    // functions in a ExWindow
+    // normal functions
+    Action drawButton(Vector4 area, Style style, std::string text);
+    Action drawSlider(Vector4 area, Style style, float maxValue, float* value, bool showValue, float step);
+    Action drawSlider(Vector4 area, Style style, float maxValue, float* value, bool showValue);
+
+    // functions in a Inner
+    
+
+
+    namespace Inner {
+        
+    }
+
+
 }
 
 
